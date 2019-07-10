@@ -100,6 +100,7 @@ vendor.gatekeeper.disable_spu=true
 ro.hardware.keystore_desede=true
 
 # Media
+debug.stagefright.c2inputsurface=-1
 media.stagefright.enable-aac=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-http=true
