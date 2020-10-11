@@ -16,6 +16,11 @@
 
 package org.lineageos.settings.popupcamera;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
@@ -48,9 +53,23 @@ public class PopupCameraSettingsFragment extends PreferenceFragment
     @Override
     public boolean onPreferenceClick(Preference preference) {
         if (MOTOR_CALIBRATION_KEY.equals(preference.getKey())) {
-            mPopupCameraService.calibrateMotor();
+            showCalibrationWarningDialog();
             return true;
         }
         return false;
+    }
+
+    private void showCalibrationWarningDialog() {
+        AlertDialog alertDialog = new AlertDialog.Builder(getActivity())
+                .setTitle(R.string.popup_calibration_warning_title)
+                .setMessage(R.string.popup_calibration_warning_text)
+                .setPositiveButton(R.string.popup_camera_calibrate_now,
+                        (dialog, which) -> {
+                            mPopupCameraService.calibrateMotor();
+                            dialog.cancel();
+                        })
+                .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.cancel())
+                .create();
+        alertDialog.show();
     }
 }
