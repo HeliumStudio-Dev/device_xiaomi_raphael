@@ -108,6 +108,7 @@ media.stagefright.enable-player=true
 media.stagefright.enable-qcp=true
 media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.odm.build.media_performance_class=30
 vendor.media.omx=0
 
 # Netflix
