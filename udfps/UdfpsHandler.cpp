@@ -19,6 +19,7 @@
 #define PARAM_NIT_NONE 0
 
 #define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui"
+#define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
 
 static bool readBool(int fd) {
     char c;
@@ -45,14 +46,20 @@ class XiaomiRaphaelUdfpsHandler : public UdfpsHandler {
         mDevice = device;
 
         std::thread([this]() {
-            int fd = open(FOD_UI_PATH, O_RDONLY);
-            if (fd < 0) {
-                LOG(ERROR) << "failed to open fd, err: " << fd;
+            int fodUiFd = open(FOD_UI_PATH, O_RDONLY);
+            if (fodUiFd < 0) {
+                LOG(ERROR) << "failed to open fd, err: " << fodUiFd;
+                return;
+            }
+
+            int fodStatusFd = open(FOD_STATUS_PATH, O_WRONLY);
+            if (fodStatusFd < 0) {
+                LOG(ERROR) << "failed to open fd, err: " << fodStatusFd;
                 return;
             }
 
             struct pollfd fodUiPoll = {
-                .fd = fd,
+                .fd = fodUiFd,
                 .events = POLLERR | POLLPRI,
                 .revents = 0,
             };
@@ -64,8 +71,14 @@ class XiaomiRaphaelUdfpsHandler : public UdfpsHandler {
                     continue;
                 }
 
+                bool fodUi = readBool(fodUiFd);
+
                 mDevice->extCmd(mDevice, COMMAND_NIT,
-                                readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+                                fodUi ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+
+                if (fodStatusFd >= 0) {
+                    write(fodStatusFd, fodUi ? "1" : "-1", 1);
+                }
             }
         }).detach();
     }
