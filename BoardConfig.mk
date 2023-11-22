@@ -134,6 +134,9 @@ BOARD_SUPER_PARTITION_GROUPS := raphael_dynamic_partitions
 BOARD_RAPHAEL_DYNAMIC_PARTITIONS_SIZE := 6438256640 # (BOARD_SUPER_PARTITION_SIZE - 4MiB)
 BOARD_RAPHAEL_DYNAMIC_PARTITIONS_PARTITION_LIST := $(ALL_PARTITIONS)
 
+# Partitions - reserved size
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
