@@ -377,11 +377,14 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libcurl.vendor \
+    libjson \
+    libjsoncpp.vendor \
 
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
+    libsqlite.vendor \
     libvndfwk_detect_jni.qti.vendor
 
 PRODUCT_COPY_FILES += \
@@ -485,6 +488,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libnl \
+    libpng.vendor \
     libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
