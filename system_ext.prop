@@ -24,6 +24,7 @@ bluetooth.profile.sap.server.enabled=true
 
 # Camera
 persist.camera.gyro.disable=0
+vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam,org.lineageos.aperture,org.lineageos.aperture.dev
 
 # CNE
 persist.vendor.cne.feature=1
