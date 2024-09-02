@@ -39,6 +39,9 @@ vendor.audio.use.sw.ape.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.voice.path.for.pcm.voip=false
 
+# Audio hardware
+ro.hardware.audio.primary=raphael
+
 # Bluetooth
 persist.vendor.qcom.bluetooth.soc=cherokee
 
