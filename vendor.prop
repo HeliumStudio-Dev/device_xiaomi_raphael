@@ -96,6 +96,10 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Fastbootd
 ro.fastbootd.available=true
 
+# Fingerprint
+persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.sensor_location=540|2026|95
+
 # FM
 vendor.hw.fm.init=0
 
