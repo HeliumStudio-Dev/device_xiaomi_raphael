@@ -466,9 +466,9 @@ system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
-vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/libdpmqmihal.so
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libdpmqmihal.so
 
 # DRM
@@ -523,7 +523,7 @@ system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
 -system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -937,7 +937,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # RIL (IMS) - from alioth V13.0.3.0.SKHCNXM
 system_ext/lib64/lib-imsvideocodec.so|2536b0f74d72285266c98dac25ae296d6240984b
@@ -1102,7 +1102,7 @@ vendor/etc/seccomp_policy/wfdvndservice.policy
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy
 vendor/etc/wfdconfig.xml
 vendor/lib/libFileMux_proprietary.so
-vendor/lib/libmmosal.so
+vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor
 vendor/lib/libmmrtpdecoder_proprietary.so
 vendor/lib/libmmrtpencoder_proprietary.so
 vendor/lib/libwfdcodecv4l2_proprietary.so
@@ -1125,16 +1125,16 @@ vendor/lib/libwfduibcsinkinterface_proprietary.so
 vendor/lib/libwfduibcsrc_proprietary.so
 vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
-vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/libmmosal.so
+vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libwfddisplayconfig_proprietary.so
 vendor/lib64/libwfdhdcpcp.so
-vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
 
 # WiFi Display - from alioth V13.0.3.0.SKHCNXM
 framework/WfdCommon.jar|9f431b56d7f38c71089333008695dd5f717e5034
