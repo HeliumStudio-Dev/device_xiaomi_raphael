@@ -279,6 +279,11 @@ PRODUCT_COPY_FILES += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint
+
 # Popup Camera
 PRODUCT_PACKAGES += \
     XiaomiPopupCamera
