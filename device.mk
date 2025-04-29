@@ -190,6 +190,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libudfpshandler
 
+$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/xiaomi:libudfps_extension.xiaomi)
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
