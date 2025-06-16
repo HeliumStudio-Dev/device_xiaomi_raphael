@@ -49,6 +49,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
+    ('vendor/lib/hw/audio.primary.raphael.so', 'vendor/lib/libaudioroute_ext.so'): blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
     'vendor/lib64/camera/components/com.qti.node.watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
     ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
