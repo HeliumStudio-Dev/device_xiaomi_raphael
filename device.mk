@@ -199,6 +199,14 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi_raphael
