@@ -1,6 +1,12 @@
 # Camera
 persist.vendor.camera.privapp.list=com.android.camera
 
+# Debug
+ro.debuggable=1
+persist.sys.usb.config=adb
+persist.service.adb.enable=1
+ro.adb.secure=0
+
 # Display
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
