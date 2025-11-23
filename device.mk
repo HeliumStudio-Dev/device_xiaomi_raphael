@@ -156,7 +156,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
-    libmegface
+    libmegface \
+    libpiex_shim
 
 # Display
 PRODUCT_PACKAGES += \
@@ -415,10 +416,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl-xiaomi \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
-
-# Shim
-PRODUCT_PACKAGES += \
-    libwatermark_shim
 
 PRODUCT_PACKAGES += \
     sensors.udfps
