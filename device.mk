@@ -149,7 +149,9 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
     libgui_vendor \
+    libstdc++.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
     vendor.xiaomi.hardware.motor@1.0.vendor
 
 # Component overrides
