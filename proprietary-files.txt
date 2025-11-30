@@ -321,18 +321,18 @@ vendor/lib64/libvidhance.so
 vendor/firmware/CAMERA_ICP.elf
 
 # Camera Motor
-media/audio/ui/popup_cangmen_down.ogg
-media/audio/ui/popup_cangmen_up.ogg
-media/audio/ui/popup_chilun_down.ogg
-media/audio/ui/popup_chilun_up.ogg
-media/audio/ui/popup_jijia_down.ogg
-media/audio/ui/popup_jijia_up.ogg
-media/audio/ui/popup_mofa_down.ogg
-media/audio/ui/popup_mofa_up.ogg
-media/audio/ui/popup_muqin_down.ogg
-media/audio/ui/popup_muqin_up.ogg
-media/audio/ui/popup_yingyan_down.ogg
-media/audio/ui/popup_yingyan_up.ogg
+system/media/audio/ui/popup_cangmen_down.ogg
+system/media/audio/ui/popup_cangmen_up.ogg
+system/media/audio/ui/popup_chilun_down.ogg
+system/media/audio/ui/popup_chilun_up.ogg
+system/media/audio/ui/popup_jijia_down.ogg
+system/media/audio/ui/popup_jijia_up.ogg
+system/media/audio/ui/popup_mofa_down.ogg
+system/media/audio/ui/popup_mofa_up.ogg
+system/media/audio/ui/popup_muqin_down.ogg
+system/media/audio/ui/popup_muqin_up.ogg
+system/media/audio/ui/popup_yingyan_down.ogg
+system/media/audio/ui/popup_yingyan_up.ogg
 vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
 vendor/etc/step_motor/mi_camera_config.xml
 vendor/lib/hw/vendor.xiaomi.hardware.motor@1.0-impl.so
@@ -449,7 +449,7 @@ vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
 # DPM
-framework/tcmclient.jar
+system/framework/tcmclient.jar
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc
@@ -1044,7 +1044,7 @@ vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 
 # Soter
-app/SoterService/SoterService.apk
+vendor/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
@@ -1142,7 +1142,7 @@ vendor/lib64/libwfdhdcpcp.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
 
 # WiFi Display - from alioth V13.0.3.0.SKHCNXM
-framework/WfdCommon.jar|9f431b56d7f38c71089333008695dd5f717e5034
+system/framework/WfdCommon.jar|9f431b56d7f38c71089333008695dd5f717e5034
 system_ext/bin/wfdservice|2d9bde189325b3faf4e1571543867c6a7e00762d
 system_ext/bin/wfdservice64|dfba81ff32b92652dfca237b590dd104dc7ced34
 system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
