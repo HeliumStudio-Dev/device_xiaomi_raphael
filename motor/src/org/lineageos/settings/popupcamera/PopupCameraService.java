@@ -17,7 +17,6 @@
 package org.lineageos.settings.popupcamera;
 
 import android.annotation.NonNull;
-import android.app.AlertDialog;
 import android.app.Service;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -37,6 +36,8 @@ import android.os.SystemClock;
 import android.os.UserHandle;
 import android.util.Log;
 import android.view.WindowManager;
+
+import androidx.appcompat.app.AlertDialog;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
