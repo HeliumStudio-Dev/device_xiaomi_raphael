@@ -16,6 +16,9 @@ $(call inherit-product, device/xiaomi/raphael/device.mk)
 # Inherit some common Miku UI stuff.
 $(call inherit-product, vendor/miku/build/product/miku_product.mk)
 
+# Maintainer
+MIKU_MASTER := Helium_Studio
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := miku_raphael
 PRODUCT_DEVICE := raphael
