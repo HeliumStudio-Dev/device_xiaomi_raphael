@@ -1,0 +1,83 @@
+//
+// Copyright (C) 2021 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+    imports: [
+        "hardware/google/interfaces",
+        "hardware/google/pixel",
+    ],
+}
+
+cc_binary {
+    name: "android.hardware.power-service.lineage-libperfmgr",
+    defaults: ["android.hardware.power-ndk_shared"],
+    relative_install_path: "hw",
+    init_rc: ["android.hardware.power-service.lineage-libperfmgr.rc"],
+    vintf_fragments: ["android.hardware.power-service.lineage.xml"],
+    vendor: true,
+    cflags: [
+        "-Wno-unused-variable",
+        "-Wno-unused-parameter",
+        "-Wthread-safety",
+    ],
+    shared_libs: [
+        "android.hardware.thermal@2.0",
+        "android.hardware.thermal-V1-ndk",
+        "libbase",
+        "libbinder_ndk",
+        "libcutils",
+        "libdl",
+        "liblog",
+        "libperfmgr",
+        "libprocessgroup",
+        "libutils",
+        "pixel-power-ext-V1-ndk",
+        "android.frameworks.stats-V2-ndk",
+        "android.hardware.common.fmq-V1-ndk",
+        "libfmq",
+    ],
+    static_libs: [
+        "libgmock",
+        "libgtest",
+        "libpixelstats",
+    ],
+    whole_static_libs: select(soong_config_variable("power_libperfmgr", "mode_extension_lib"), {
+        any @ flag_val: [flag_val],
+        default: ["libperfmgr-ext"],
+    }),
+    srcs: [
+        "BackgroundWorker.cpp",
+        "ChannelGroup.cpp",
+        "ChannelManager.cpp",
+        "MetricUploader.cpp",
+        "GpuCalculationHelpers.cpp",
+        "GpuCapacityNode.cpp",
+        "service.cpp",
+        "InteractionHandler.cpp",
+        "Power.cpp",
+        "PowerExt.cpp",
+        "PowerHintSession.cpp",
+        "PowerSessionManager.cpp",
+        "SupportManager.cpp",
+        "UClampVoter.cpp",
+        "SessionRecords.cpp",
+        "SessionChannel.cpp",
+        "SessionTaskMap.cpp",
+        "SessionValueEntry.cpp",
+        "TaskRampupMultNode.cpp",
+        "utils/ThermalStateListener.cpp",
+    ],
+    cpp_std: "gnu++20",
+}
+
+cc_library_static {
+    name: "libperfmgr-ext",
+    defaults: ["android.hardware.power-ndk_shared"],
+    vendor: true,
+    srcs: [
+        "PowerModeExtension.cpp",
+    ],
+}
