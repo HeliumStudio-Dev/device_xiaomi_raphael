@@ -293,7 +293,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.lineage-libperfmgr \
+    android.hardware.power-service.raphael-libperfmgr \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \

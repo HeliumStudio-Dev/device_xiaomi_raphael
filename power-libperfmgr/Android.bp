@@ -12,11 +12,11 @@ soong_namespace {
 }
 
 cc_binary {
-    name: "android.hardware.power-service.lineage-libperfmgr",
+    name: "android.hardware.power-service.raphael-libperfmgr",
     defaults: ["android.hardware.power-ndk_shared"],
     relative_install_path: "hw",
-    init_rc: ["android.hardware.power-service.lineage-libperfmgr.rc"],
-    vintf_fragments: ["android.hardware.power-service.lineage.xml"],
+    init_rc: ["android.hardware.power-service.raphael-libperfmgr.rc"],
+    vintf_fragments: ["android.hardware.power-service.raphael.xml"],
     vendor: true,
     cflags: [
         "-Wno-unused-variable",
