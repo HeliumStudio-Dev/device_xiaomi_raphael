@@ -168,7 +168,7 @@ on early-boot
     chown system system /sys/class/leds/white/start_idx
     chown system system /sys/class/leds/white/trigger
 
-service vendor.light-default /vendor/bin/hw/android.hardware.light-service.lineage
+service vendor.light-default /vendor/bin/hw/android.hardware.light-service.raphael
     class hal
     user system
     group system

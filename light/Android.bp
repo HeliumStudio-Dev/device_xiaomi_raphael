@@ -5,12 +5,12 @@
 //
 
 cc_binary {
-    name: "android.hardware.light-service.lineage",
+    name: "android.hardware.light-service.raphael",
     defaults: ["hidl_defaults"],
     vendor: true,
     relative_install_path: "hw",
-    init_rc: ["android.hardware.light-service.lineage.rc"],
-    vintf_fragments: ["android.hardware.light-service.lineage.xml"],
+    init_rc: ["android.hardware.light-service.raphael.rc"],
+    vintf_fragments: ["android.hardware.light-service.raphael.xml"],
     srcs: [
         "BacklightDevice.cpp",
         "Devices.cpp",
