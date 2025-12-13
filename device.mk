@@ -147,6 +147,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl
 
 # Camera
+$(call inherit-product-if-exists, device/xiaomi/miuicamera/device.mk)
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 

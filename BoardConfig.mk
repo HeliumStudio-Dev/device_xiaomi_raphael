@@ -4,6 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+
+
+# Include MIUI Camera board settings if present
+ifneq ($(wildcard device/xiaomi/miuicamera/BoardConfig.mk),)
+include device/xiaomi/miuicamera/BoardConfig.mk
+endif
+
 DEVICE_PATH := device/xiaomi/raphael
 KERNEL_PATH := device/xiaomi/raphael-kernel
 
