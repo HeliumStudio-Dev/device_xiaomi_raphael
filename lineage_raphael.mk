@@ -15,6 +15,16 @@ $(call inherit-product, device/xiaomi/raphael/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# AviumUI specific configurations
+AVIUM_BUILDTYPE := Unofficial
+AVIUM_MAINTAINER := Helium_Studio
+AVIUM_VERSION_APPEND_TIME_OF_DAY := false
+
+# GMS
+WITH_GMS := false
+TARGET_INCLUDE_GOOGLEIME := true
+TARGET_GOOGLEIME_OVERRIDE_IME := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_raphael
 PRODUCT_DEVICE := raphael
