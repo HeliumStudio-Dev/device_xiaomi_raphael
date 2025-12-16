@@ -79,10 +79,10 @@ BOARD_HAVE_QCOM_FM := true
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 ODM_MANIFEST_SKUS += raphael
-ODM_MANIFEST_RAPHAEL_FILES := $(DEVICE_PATH)/manifest_nfc.xml
+ODM_MANIFEST_RAPHAEL_FILES := $(DEVICE_PATH)/configs/hidl/manifest_nfc.xml
 
 # Media
 TARGET_DISABLED_UBWC := true
