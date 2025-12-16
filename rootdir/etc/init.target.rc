@@ -92,10 +92,6 @@ on boot
     start rmt_storage
     start rfs_access
 
-    # set default schedTune value for camera-daemon
-    write /dev/stune/camera-daemon/schedtune.prefer_idle 1
-    write /dev/stune/camera-daemon/schedtune.boost 0
-
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
@@ -133,6 +129,12 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
     write /dev/cpuset/audio-app/cpus 0-3
+
+    # Configure UClamp
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/background/cpu.uclamp.max 30
+    write /dev/cpuctl/foreground/cpu.uclamp.max 80
+    write /dev/cpuctl/system-background/cpu.uclamp.max 50
 
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
