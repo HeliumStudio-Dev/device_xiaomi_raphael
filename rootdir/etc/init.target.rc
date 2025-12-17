@@ -86,24 +86,11 @@ on post-fs-data
 on early-boot
     start vendor.sensors
 
-# For cpusets initialize for Silver Only first and then Silver + Gold
-# Silver Only configuration cannot work with 0-7
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
     chown system system /sys/kernel/qvr_external_sensor/fd
     start rmt_storage
     start rfs_access
-    write /dev/cpuset/top-app/cpus 0-3
-    write /dev/cpuset/audio-app/cpus 1-2
-    write /dev/cpuset/foreground/cpus 0-3
-    write /dev/cpuset/foreground/boost/cpus 0-3
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/foreground/boost/cpus 0-7
-    write /dev/cpuset/background/cpus 0-7
-    write /dev/cpuset/system-background/cpus 0-7
 
     # set default schedTune value for camera-daemon
     write /dev/stune/camera-daemon/schedtune.prefer_idle 1
@@ -137,6 +124,15 @@ on property:vendor.post_boot.parsed=1
     # Enable idle state listener
     write /sys/class/drm/card0/device/idle_encoder_mask 1
     write /sys/class/drm/card0/device/idle_timeout_ms 100
+
+    # Setup runtime cpusets
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/foreground_window/cpus 0-6
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
+    write /dev/cpuset/audio-app/cpus 0-3
 
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
