@@ -91,16 +91,6 @@ vendor/lib/libaudioroute_ext.so
 vendor/lib/libqtigef.so
 vendor/lib/libssrec.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
-vendor/lib64/hw/audio.primary.msmnile.so:vendor/lib64/hw/audio.primary.raphael.so;FIX_SONAME
-vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libaudioconfigstore.so
-vendor/lib64/libaudioroute_ext.so
-vendor/lib64/libqtigef.so
-vendor/lib64/libssrec.so
-vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
 
 # Audio Amplifier
 vendor/firmware/tfa98xx.cnt
