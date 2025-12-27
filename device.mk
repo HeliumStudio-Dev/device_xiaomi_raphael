@@ -357,13 +357,13 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client
+
+# Popup Camera
+PRODUCT_PACKAGES += \
+    XiaomiPopupCamera
 
 # Power
 PRODUCT_PACKAGES += \
