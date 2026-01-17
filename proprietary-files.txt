@@ -300,6 +300,7 @@ vendor/lib64/libremosaic_daemon.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libswregistrationalgo.so
+vendor/lib64/libsymphony-cpu.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libvidhance.so
