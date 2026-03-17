@@ -47,6 +47,7 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 camera.disable_zsl_mode=true
+ro.product.mod_device=raphael_global
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
