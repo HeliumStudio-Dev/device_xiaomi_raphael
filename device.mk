@@ -242,6 +242,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_raphael)
 
