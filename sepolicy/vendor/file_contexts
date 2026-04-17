@@ -11,7 +11,7 @@
 /mnt/vendor/persist/camera(/.*)?    u:object_r:persist_camera_file:s0
 
 # Charger
-/vendor/bin/batterysecret                                       u:object_r:batterysecret_exec:s0
+/vendor/bin/batterysecret                                       u:object_r:vendor_batterysecret_exec:s0
 
 # Devices
 /dev/akm09970                                                   u:object_r:hall_device:s0
@@ -42,6 +42,10 @@
 # MAC
 /vendor/bin/nv_mac                                              u:object_r:vendor_wcnss_service_exec:s0
 /data/vendor/mac_addr(/.*)?                                     u:object_r:vendor_wifi_vendor_data_file:s0
+
+
+# Persist subsystem
+/mnt/vendor/persist/subsys(/.*)?                                                                    u:object_r:vendor_persist_subsys_file:s0
 
 # Thermal
 /vendor/bin/mi_thermald                                         u:object_r:mi_thermald_exec:s0
