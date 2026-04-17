@@ -1046,10 +1046,16 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Subsystem
 vendor/bin/ssr_setup
 
-# Thermal
-vendor/bin/mi_thermald
-vendor/bin/thermal_factory
-vendor/etc/init/init.mi_thermald.rc
+# Thermal - from nabu OS1.0.18.0.TKXINXM 
+vendor/bin/mi_thermald|40a5d3315d91cbaeb090dc06c8f63d7d369b85b1
+vendor/etc/init/init.mi_thermald.rc|6505d89e19957888612d89f6769585a7d26af080
+
+# Thermal engine - from nabu OS1.0.18.0.TKXINXM
+vendor/bin/thermal-engine|e74184e124c41e51535fad6a6ad9cc089695211b
+vendor/lib/libthermalclient.so|31533667b7f8137670189a14c68ccb51c7ca6dab
+vendor/lib64/libthermalclient.so|41274c82e1a472d12b2ebcb4156f7f77b109efa8
+
+# Thermal configs
 vendor/etc/thermal-arvr.conf
 vendor/etc/thermal-camera.conf
 vendor/etc/thermal-chg-only.conf
