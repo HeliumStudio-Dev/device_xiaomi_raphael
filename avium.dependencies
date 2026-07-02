@@ -1,5 +1,17 @@
 [
   {
+    "repository": "Evolution-X-Devices/hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "remote": "github-non-los",
+    "branch": "bka-no-dsp"
+  },
+  {
+    "repository": "crdroidandroid/android_hardware_dolby",
+    "target_path": "hardware/dolby",
+    "remote": "github-non-los",
+    "branch": "16.0-raphael"
+  },
+  {
     "repository": "crdroidandroid/android_device_xiaomi_miuicamera",
     "target_path": "device/xiaomi/miuicamera",
     "remote": "crdroid-gitlab",
