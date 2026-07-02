@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "crdroidandroid/android_device_xiaomi_miuicamera",
+    "target_path": "device/xiaomi/miuicamera",
+    "remote": "crdroid-gitlab",
+    "branch": "16.0-raphael"
+  },
+  {
+    "repository": "crdroidandroid/proprietary_vendor_xiaomi_miuicamera",
+    "target_path": "vendor/xiaomi/miuicamera",
+    "remote": "crdroid-gitlab",
+    "branch": "16.0-raphael"
+  }
+]
